@@ -1,9 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
 
 namespace TechnologApp.Services
 {
@@ -16,7 +13,7 @@ namespace TechnologApp.Services
         {
             _httpClient = new HttpClient
             {
-                BaseAddress = new Uri("https://localhost:5057")
+                BaseAddress = new Uri("http://localhost:5057")
             };
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }

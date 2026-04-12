@@ -49,6 +49,10 @@ namespace TechnologApp.ViewModels
                 var items = await _service.GetAllAsync();
                 Items = new ObservableCollection<T>(items);
                 StatusMessage = $"Загружено: {Items.Count}";
+                foreach (var item in items)
+                {
+                    Console.WriteLine(item.ToString());
+                }
             }
             catch (Exception ex)
             {

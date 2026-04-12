@@ -8,6 +8,6 @@ namespace TechnologApp.ViewModels
 {
     public partial class ProductsViewModel : BaseListViewModel<Product>
     {
-        protected override string Endpoint => "/api/Product";
+        protected override string Endpoint => "Product";
     }
 }

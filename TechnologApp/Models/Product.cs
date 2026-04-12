@@ -6,16 +6,16 @@ namespace Plants.API;
 
 public partial class Product
 {
-    public int IdProduct { get; set; }
+    public int idProduct { get; set; }
 
-    public string Code { get; set; } = null!;
+    public string code { get; set; } = null!;
 
-    public string NameProduct { get; set; } = null!;
+    public string nameProduct { get; set; } = null!;
 
-    public string Type { get; set; } = null!;
+    public string type { get; set; } = null!;
 
-    public string Form { get; set; } = null!;
+    public string form { get; set; } = null!;
 
-    public string? Status { get; set; }
+    public string? status { get; set; }
 
 }

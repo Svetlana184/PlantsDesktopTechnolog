@@ -32,30 +32,29 @@
         <!-- Таблица данных -->
         <DataGrid ItemsSource="{Binding Items}"
                   SelectedItem="{Binding SelectedItem}"
+                  AutoGenerateColumns="False"
                   CanUserResizeColumns="True"
-                  CanUserSortColumns="True"
-                  CanUserReorderColumns="True"
-                  GridLinesVisibility="Horizontal"
-                  BorderThickness="0"
-                  AutoGenerateColumns="True">
+                  CanUserSortColumns="True">
 
-            <!-- Стили DataGrid -->
-            <DataGrid.Styles>
-                <Style Selector="DataGridRow">
-                    <Setter Property="Background" Value="White"/>
-                </Style>
-                <Style Selector="DataGridRow:selected">
-                    <Setter Property="Background" Value="#E3F2FD"/>
-                </Style>
-                <Style Selector="DataGridRow:pointerover">
-                    <Setter Property="Background" Value="#F5F5F5"/>
-                </Style>
-                <Style Selector="DataGridColumnHeader">
-                    <Setter Property="Background" Value="#E9ECEF"/>
-                    <Setter Property="FontWeight" Value="SemiBold"/>
-                    <Setter Property="Padding" Value="12,8"/>
-                </Style>
-            </DataGrid.Styles>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding idProduct}" Width="60"/>
+                <DataGridTextColumn Header="Код" Binding="{Binding code}" Width="100"/>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding nameProduct}" Width="250"/>
+                <DataGridTextColumn Header="Тип" Binding="{Binding type}" Width="120"/>
+                <DataGridTextColumn Header="Форма" Binding="{Binding form}" Width="120"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding status}" Width="110"/>
+
+                <!-- Кнопки действий -->
+                <DataGridTemplateColumn Header="Действия" Width="120">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Spacing="5">
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
         </DataGrid>
     </DockPanel>
 </UserControl>
