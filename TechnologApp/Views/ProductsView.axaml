@@ -1,0 +1,61 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:TechnologApp.ViewModels"
+             x:Class="TechnologApp.Views.ProductsView"
+             x:DataType="vm:ProductsViewModel"
+             x:CompileBindings="True">
+
+
+    <DockPanel>
+        <!-- Верхняя панель инструментов -->
+        <Border DockPanel.Dock="Top" Background="#F0F3F5" Padding="12,10">
+            <DockPanel>
+                <!-- Кнопки справа -->
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Spacing="8">
+                    <Button Content="➕ Добавить" Command="{Binding AddCommand}"
+                            IsEnabled="{Binding !IsLoading}" Width="100"/>
+                    <Button Content="📊 Экспорт" Command="{Binding ExportCommand}"
+                            IsEnabled="{Binding !IsLoading}" Width="100"/>
+                    <Button Content="🔄 Обновить" Command="{Binding LoadCommand}" Width="100"/>
+                </StackPanel>
+
+                <!-- Поиск и статус слева -->
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <TextBox Text="{Binding SearchText}" Watermark="🔍 Поиск..." Width="250"
+                             VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding StatusMessage}" VerticalAlignment="Center"
+                               Foreground="#6C757D" FontSize="13"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- Таблица данных -->
+        <DataGrid ItemsSource="{Binding Items}"
+                  SelectedItem="{Binding SelectedItem}"
+                  CanUserResizeColumns="True"
+                  CanUserSortColumns="True"
+                  CanUserReorderColumns="True"
+                  GridLinesVisibility="Horizontal"
+                  BorderThickness="0"
+                  AutoGenerateColumns="True">
+
+            <!-- Стили DataGrid -->
+            <DataGrid.Styles>
+                <Style Selector="DataGridRow">
+                    <Setter Property="Background" Value="White"/>
+                </Style>
+                <Style Selector="DataGridRow:selected">
+                    <Setter Property="Background" Value="#E3F2FD"/>
+                </Style>
+                <Style Selector="DataGridRow:pointerover">
+                    <Setter Property="Background" Value="#F5F5F5"/>
+                </Style>
+                <Style Selector="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#E9ECEF"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="Padding" Value="12,8"/>
+                </Style>
+            </DataGrid.Styles>
+        </DataGrid>
+    </DockPanel>
+</UserControl>
