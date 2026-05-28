@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TechnologApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3c91ea9cef81228206a9c619f403168358684b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52e9180ffdc0055951ddffec441bb4071c555286")]
 [assembly: System.Reflection.AssemblyProductAttribute("TechnologApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TechnologApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
