@@ -11,6 +11,10 @@
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaXaml Remove="Views\RecipesView.axaml" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Tmds.DBus.Protocol" Version="0.90.4" />
   </ItemGroup>

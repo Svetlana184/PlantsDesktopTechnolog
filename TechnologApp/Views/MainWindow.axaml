@@ -7,35 +7,49 @@
         x:Class="TechnologApp.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="АРМ Технолога - Производство СЗР">
+        Title="Модуль технолога">
 
     <DockPanel>
         <!-- Верхняя панель с информацией о пользователе -->
         <Border DockPanel.Dock="Top" Background="#2C3E50" Padding="15,8">
             <DockPanel>
                 <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Spacing="15">
-                    <TextBlock Text="{Binding UserRole}" Foreground="#BDC3C7" VerticalAlignment="Center"/>
+                    
                     <TextBlock Text="{Binding UserName}" Foreground="White" FontWeight="Bold" VerticalAlignment="Center"/>
                     <Button Content="Выход" Background="#E74C3C" Foreground="White"/>
                 </StackPanel>
-                <TextBlock Text="Система управления производством СЗР" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                <TextBlock Text="Модуль технолога" FontSize="18" FontWeight="Bold" Foreground="White"/>
             </DockPanel>
         </Border>
 
         <!-- Левое меню навигации -->
         <Border DockPanel.Dock="Left" Background="#34495E" Width="220">
             <StackPanel Spacing="5" Margin="5">
-                <Button Content="📊 Главная"
+                <Button Content="Главная"
                         Classes="menu-btn"/>
-                <Button Content="📦 Продукция"
+				
+                <Button Content="Продукция"
                         Classes="menu-btn"/>
-                <Button Content="🧪 Рецептуры"
+				
+                <Button Content="Рецептуры"
                         Classes="menu-btn"/>
-                <Button Content="📋 Тех. карты"
+				
+                <Button Content="Тех. карты"
                         Classes="menu-btn"/>
-                <Button Content="🏭 Производство"
+				
+                <Button Content="Заказы"
                         Classes="menu-btn"/>
-                <Button Content="📈 Отчеты"
+				
+                <Button Content="Партии"
+                        Classes="menu-btn"/>
+
+				<Button Content="Экструдер"
+                        Classes="menu-btn"/>
+
+				<Button Content="События"
+                        Classes="menu-btn"/>
+
+				<Button Content="Отчеты"
                         Classes="menu-btn"/>
             </StackPanel>
         </Border>

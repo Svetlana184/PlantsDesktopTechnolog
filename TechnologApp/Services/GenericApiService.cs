@@ -21,7 +21,7 @@ namespace TechnologApp.Services
 
         public async Task<List<T>> GetAllAsync()
         {
-            var response = await _http.GetAsync($"/api/{_endpoint}");
+            var response = await _http.GetAsync($"/api/{_endpoint}/getall");
             if (!response.IsSuccessStatusCode) return new List<T>();
 
             var json = await response.Content.ReadAsStringAsync();
@@ -33,7 +33,7 @@ namespace TechnologApp.Services
 
         public async Task<T?> GetByIdAsync(int id)
         {
-            var response = await _http.GetAsync($"/api/{_endpoint}/{id}");
+            var response = await _http.GetAsync($"/api/{_endpoint}/get/{id}");
             if (!response.IsSuccessStatusCode) return null;
 
             var json = await response.Content.ReadAsStringAsync();
@@ -47,7 +47,7 @@ namespace TechnologApp.Services
         {
             var json = JsonSerializer.Serialize(entity);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await _http.PostAsync(_endpoint, content);
+            var response = await _http.PostAsync($"/api/{_endpoint}/post", content);
             return response.IsSuccessStatusCode;
         }
 
@@ -55,13 +55,13 @@ namespace TechnologApp.Services
         {
             var json = JsonSerializer.Serialize(entity);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await _http.PutAsync($"/api/{_endpoint}/{id}", content);
+            var response = await _http.PutAsync($"/api/{_endpoint}/update/{id}", content);
             return response.IsSuccessStatusCode;
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var response = await _http.DeleteAsync($"/api/{_endpoint}/{id}");
+            var response = await _http.DeleteAsync($"/api/{_endpoint}/delete/{id}");
             return response.IsSuccessStatusCode;
         }
     }
