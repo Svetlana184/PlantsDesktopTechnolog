@@ -2442,23 +2442,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Goblin\\.nuget\\packages\\": {},
+    "C:\\Users\\goblin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PlantsDesktop2\\TechnologApp\\TechnologApp.csproj",
+      "projectUniqueName": "C:\\Users\\goblin\\Source\\Repos\\PlantsDesktopTechnolog\\TechnologApp\\TechnologApp.csproj",
       "projectName": "TechnologApp",
-      "projectPath": "D:\\PlantsDesktop2\\TechnologApp\\TechnologApp.csproj",
-      "packagesPath": "C:\\Users\\Goblin\\.nuget\\packages\\",
-      "outputPath": "D:\\PlantsDesktop2\\TechnologApp\\obj\\",
+      "projectPath": "C:\\Users\\goblin\\Source\\Repos\\PlantsDesktopTechnolog\\TechnologApp\\TechnologApp.csproj",
+      "packagesPath": "C:\\Users\\goblin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\goblin\\Source\\Repos\\PlantsDesktopTechnolog\\TechnologApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Goblin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\goblin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2467,7 +2467,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2486,7 +2485,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -2547,19 +2546,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.14, 9.0.14]"
+            "version": "[9.0.11, 9.0.11]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[9.0.14, 9.0.14]"
+            "version": "[9.0.11, 9.0.11]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[9.0.14, 9.0.14]"
+            "version": "[9.0.11, 9.0.11]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[9.0.14, 9.0.14]"
+            "version": "[9.0.11, 9.0.11]"
           }
         ],
         "frameworkReferences": {
@@ -2567,7 +2566,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2586,7 +2585,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "У пакета \"Tmds.DBus.Protocol\" 0.91.0 есть известная уязвимость https://github.com/advisories/GHSA-xrw6-gwf8-vvr9 (уровень серьезности: высокий уровень)",
+      "message": "У пакета \"Tmds.DBus.Protocol\" 0.91.0 есть известная уязвимость https://github.com/advisories/GHSA-xrw6-gwf8-vvr9 (уровень серьезности: высокий)",
       "libraryId": "Tmds.DBus.Protocol",
       "targetGraphs": [
         "net9.0"
